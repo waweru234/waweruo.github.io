@@ -1,0 +1,449 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #bb86fc; /* Purple accent */
+  }
+  
+  a {
+    color: #bb86fc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    top: 20px; /* Adjusted for better spacing */
+    left: 20px; /* Adjusted for better spacing */
+    z-index: 10;
+    animation: slideInLeft 1s ease-out; /* Logo slide-in animation */
+  }
+  
+  .logo img {
+    width: 150px; /* Default size */
+    max-width: 100%; /* Ensure it scales down */
+    height: auto;
+    animation: rotateLogo 20s linear infinite; 
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      top: 10px; /* Adjusted for mobile */
+      left: 10px; /* Adjusted for mobile */
+    }
+  
+    .logo img {
+      width: 80px; /* Smaller size for mobile */
+    }
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #121212; /* Slightly lighter black */
+    height: 100vh; /* Full-screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure logo stays on top */
+    overflow: hidden; /* Hide overflow for animations */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Increased space between text and image */
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column; /* Stack content vertically on mobile */
+      text-align: center; /* Center-align text on mobile */
+      gap: 40px; /* Reduced gap for mobile */
+    }
+  }
+  
+  .header-text {
+    flex: 1;
+    max-width: 600px; /* Limit text width */
+    animation: slideInLeft 1s ease-out; /* Text slide-in animation */
+  }
+  
+  /* Name (h1) Styles */
+  .typing-animation {
+    font-size: 2rem; /* Default size for desktop */
+    margin: 0;
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Keep text in one line */
+    animation: typing-deleting 6s steps(20, end) infinite;
+  }
+  
+  /* Description (p) Styles */
+  .header-text p {
+    font-size: 1.2rem; /* Default size for desktop */
+    margin: 10px 0 20px;
+    color: #ffffff; /* White text */
+    font-weight: bold; /* Bold font weight */
+  }
+  
+  /* Adjust Font Sizes for Mobile */
+  @media (max-width: 768px) {
+    .typing-animation {
+      font-size: 1.4rem; /* Smaller font size for mobile */
+    }
+  
+    .header-text p {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+  }
+  
+  .header-image {
+    animation: slideInRight 1s ease-out; /* Image slide-in animation */
+  }
+  
+  .header-image img {
+    width: 300px; /* Adjusted image size */
+    height: 300px; /* Adjusted image size */
+  
+    
+    object-fit:contain;
+     /* Purple shadow */
+  }
+  
+  @media (max-width: 768px) {
+    .header-image img {
+      width: 200px; /* Smaller image for mobile */
+      height: 200px; /* Smaller image for mobile */
+    }
+  }
+  
+  /* Typing and Deleting Animation for Name */
+  @keyframes typing-deleting {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    80% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  /* Slide-In Animations */
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    margin: 20px 0;
+    animation: slideInLeft 1.2s ease-out; /* Icons slide-in animation */
+  }
+  
+  .social-icons a {
+    color: #bb86fc; /* Purple icons */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffffff; /* White icons on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #bb86fc; /* Purple border */
+    border-radius: 5px;
+    color: #bb86fc; /* Purple text */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent; /* Transparent background */
+    animation: slideInLeft 1.4s ease-out; /* Buttons slide-in animation */
+  }
+  
+  .btn:hover {
+    background-color: #bb86fc; /* Purple background on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
+    text-decoration: none; /* Purple shadow */
+  }
+  
+  /* Navigation Styles */
+  nav ul {
+    list-style: none; /* Remove dots */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between buttons */
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      gap: 10px; /* Reduced gap for mobile */
+    }
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  /* About Me Section */
+/* About Me Section */
+/* About Me Section */
+/* About Me Section */
+.about {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    animation: slideInUp 1s ease-out; /* Slide-in animation */
+  }
+  
+  .about-logo {
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px; /* Add spacing below the logo */
+  }
+  
+  .about-logo img {
+    width: 100px; /* Adjust logo size as needed */
+    height: auto;
+    animation: rotateLogo 20s linear infinite; /* Rotate animation */
+  }
+  
+  @keyframes rotateLogo {
+    from {
+      transform: rotate(0deg); /* Start rotation */
+    }
+    to {
+      transform: rotate(360deg); /* Complete rotation */
+    }
+  }
+  
+  .about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #bb86fc; /* Purple accent */
+  }
+  
+  .about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff; /* White text */
+  }
+  
+  .cv-download {
+    text-align: center; /* Center the button */
+    margin-top: 30px; /* Add spacing above the button */
+  }
+  
+  .cv-download .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #bb86fc; /* Purple border */
+    border-radius: 5px;
+    color: #bb86fc; /* Purple text */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent; /* Transparent background */
+  }
+  
+  .cv-download .btn:hover {
+    background-color: #bb86fc; /* Purple background on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3); /* Purple shadow */
+  }
+  
+  @media (max-width: 768px) {
+    .about p {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+  
+    .about-logo img {
+      width: 80px; /* Smaller logo for mobile */
+    }
+  }
+  
+  /* Recent Projects Section */
+ //* Recent Projects Section */
+.projects {
+  padding: 60px 0;
+  background-color: #121212;
+  animation: slideInUp 1.2s ease-out; /* Slide-in animation */
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #bb86fc; /* Purple accent */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Spacing between project cards */
+}
+
+.project-card {
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.3); /* Purple shadow */
+}
+
+.project-image {
+  position: relative; /* Required for absolute positioning of content */
+  height: 300px; /* Fixed height for images */
+  overflow: hidden; /* Ensure content stays within the image */
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the container */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.project-content {
+  position: absolute; /* Float content on top of the image */
+  bottom: 0; /* Align content to the bottom */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #ffffff; /* White text */
+  transition: opacity 0.3s ease; /* Fade effect on hover */
+}
+
+.project-card:hover .project-content {
+  opacity: 1; /* Show content fully on hover */
+}
+
+.project-content h3 {
+  margin-top: 0;
+  color: #bb86fc; /* Purple accent */
+  font-size: 1.5rem;
+}
+
+.project-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem; /* Smaller heading for mobile */
+  }
+
+  .project-content p {
+    font-size: 0.9rem; /* Smaller text for mobile */
+  }
+} 
+  /* Contact Section */
+  .contact {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    text-align: center;
+    animation: slideInUp 1.4s ease-out; /* Contact section slide-in animation */
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #bb86fc; /* Purple accent */
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #bb86fc;
+    animation: slideInUp 1.6s ease-out; /* Footer slide-in animation */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bb86fc; /* Purple accent */
+  }
+  
+  /* Slide-Up Animation */
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
